@@ -1,0 +1,39 @@
+{
+  "name": "@local/plan-board",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "DSH 计划看板：把任务写成文件、把执行交回模型。左侧整页看板 + 会话视图 + /aboard 命令 + 模型侧工具。",
+  "keywords": ["dsh-plugin", "deepseek-harness", "plan-board", "task-board"],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "examples",
+    "skills",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

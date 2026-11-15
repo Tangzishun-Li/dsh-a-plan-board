@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Plan board",
+    "description": "A left-sidebar board for plain-language plan tasks: your picks and priorities sit beside them, and finished items get checked off and struck through.",
+    "detail": "docs/DETAIL.md"
+  }
+}

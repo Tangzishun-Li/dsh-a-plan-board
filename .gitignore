@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+*.log
+
+# Local board data when this repo itself is the session workspace
+.dsh/

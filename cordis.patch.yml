@@ -1,0 +1,15 @@
+# Plan board bundle rows.
+#
+# 1. The plugin itself (Host + Client halves).
+# 2. A filesystem skill provider that publishes the bundled `skills/plan-board`
+#    convention so any workspace installing this bundle gets the execution rules.
+- insert:
+    - id: plan-board
+      name: '@local/plan-board'
+
+    - id: plan-board-skill
+      name: '@deepseek-ai/dsh-skill-filesystem'
+      config:
+        providerName: plan-board
+        includeDefaultRoots: false
+        bundledSkillDir: !!js process.getBuiltinModule('node:path').join(process.getBuiltinModule('node:path').dirname(process.getBuiltinModule('node:module').createRequire(baseUrl).resolve('@local/plan-board/package.json')), 'skills')
